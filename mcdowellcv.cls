@@ -26,38 +26,45 @@
 \def\mainfontface{Times New Roman}
 
 \DeclareOption{calibri}{%
-  \def\mainfontface{Calibri}
+	\def\mainfontface{Calibri}
 }
 
 \ProcessOptions\relax
 
 % Set font size and paper type
-\LoadClass[letterpaper,\mainfontsize]{article} 
+\LoadClass[letterpaper,\mainfontsize]{article}
 
 % Set document margins
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} 
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
 
 
 % Set font face
 \usepackage{fontspec}
 % \setmainfont[SmallCapsFeatures={Renderer=Basic},
 % Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
-\setmainfont[SmallCapsFeatures={Renderer=Basic},
-Ligatures={TeX, NoCommon, NoDiscretionary}, BoldItalicFont=CALIBRIZ.TTF,
-    BoldFont      =CALIBRIB.TTF,
-    ItalicFont    =CALIBRII.TTF]{CALIBRI.TTF}
+% \setmainfont[ExternalLocation=fonts/calibri/][SmallCapsFeatures={Renderer=Basic},
+% 	Ligatures={TeX, NoCommon, NoDiscretionary},
+% 	BoldItalicFont=CALIBRIZ.TTF,
+% 	BoldFont      =CALIBRIB.TTF,
+% 	ItalicFont    =CALIBRII.TTF]{CALIBRI.TTF}
+\setmainfont[ExternalLocation=fonts/calibri/]{CALIBRI.TTF}
+	[SmallCapsFeatures={Renderer=Basic},
+	Ligatures={TeX, NoCommon, NoDiscretionary},
+	BoldItalicFont=CALIBRIZ.TTF,
+	BoldFont      =CALIBRIB.TTF,
+	ItalicFont    =CALIBRII.TTF]
 
 % Remove paragraph indentation
-\usepackage[parfill]{parskip} 
+\usepackage[parfill]{parskip}
 
 % Required for boldface (\bf and \bfseries) tabular columns
-\usepackage{array} 
+\usepackage{array}
 
 % Required for ifthenelse statements
-\usepackage{etoolbox} 
+\usepackage{etoolbox}
 
 % Suppress page numbers
-\pagestyle{empty} 
+\pagestyle{empty}
 
 % Flexible tables
 \usepackage{tabu}
@@ -76,7 +83,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}, BoldItalicFont=CALIBRIZ.TTF,
 % For spcaed small caps
 \usepackage{microtype}
 
-\DeclareMicrotypeSet*{smallcapsi} { 
+\DeclareMicrotypeSet*{smallcapsi} {
 	encoding = {T1},
 	shape    = {sc*,si,scit}
 }
@@ -86,8 +93,8 @@ Ligatures={TeX, NoCommon, NoDiscretionary}, BoldItalicFont=CALIBRIZ.TTF,
 %                                    Constants                                  -
 %--------------------------------------------------------------------------------
 \def\afterheaderspace{3pt}
-\def\beforesectionheaderspace{4.75pt}
-\def\sectionheadermargin{6pt}
+\def\beforesectionheaderspace{1pt}
+\def\sectionheadermargin{2pt}
 \def\aftersectionheaderspace{-4pt}
 \def\sectionheaderhrlueheight{0.5pt}
 \def\aftersinglelinesubsectionheaderspace{-18.5pt}
@@ -95,7 +102,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}, BoldItalicFont=CALIBRIZ.TTF,
 \def\aftermultilinesubsectionheaderspace{-6pt}
 \def\afteremptysubsectionheaderspace{3pt}
 \def\subsectionmargin{9pt}
-\def\aftersubsectionspace{4pt}
+\def\aftersubsectionspace{-3pt}
 
 %--------------------------------------------------------------------------------
 %                            Header Setup and Printing                          -
@@ -164,7 +171,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}, BoldItalicFont=CALIBRIZ.TTF,
 	\begin{center}
 		\begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
 			\printaddress \printwebpage & \printname & \printcontacts \printgithub \\
-		\end{tabu}	
+		\end{tabu}
 	\end{center}
 	\vspace*{\afterheaderspace}
 }
@@ -216,8 +223,8 @@ Ligatures={TeX, NoCommon, NoDiscretionary}, BoldItalicFont=CALIBRIZ.TTF,
 	\togglefalse{centertitledefined}
 	\togglefalse{righttitledefined}
 	\begin{adjustwidth}{\subsectionmargin}{\subsectionmargin}
-}
-{
+		}
+		{
 	\end{adjustwidth}
 	\vspace*{\aftersubsectionspace}
 }
