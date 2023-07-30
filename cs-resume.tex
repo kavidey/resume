@@ -1,0 +1,290 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+\usepackage{etaremune}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{fontawesome5}
+\usepackage{academicons}
+\usepackage{fontspec} 
+\usepackage{xunicode}
+\usepackage[dvipsnames]{xcolor}
+%\definecolor{primary}{rgb}{21,39,97}
+\setmainfont[Path = fonts/lato/]{Lato-Lig}
+[
+BoldFont = Lato-Bol.ttf,
+ItalicFont = Lato-LigIta.ttf]
+
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/raleway/]{Raleway-ExtraLight}
+\newcommand{\amper}{{\fontspec[Scale=.95]{Lato}\selectfont\itshape\&}}
+
+%\usepackage[xetex, bookmarks, colorlinks, breaklinks, pdftitle={Resume},pdfauthor={Kavi A. M. Dey}]{hyperref} 
+\usepackage[colorlinks]{hyperref} 
+\definecolor{darkblue}{HTML}{0C0893} 
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=darkblue} 
+
+\usepackage[backend=bibtex,style=numeric-comp,maxnames=4, minnames=3]{biblatex}
+\addbibresource{publications.bib}
+%http://tug.ctan.org/info/biblatex-cheatsheet/biblatex-cheatsheet.pdf
+\usepackage[utf8]{inputenc}
+
+\usepackage[symbol]{footmisc}
+\usepackage{paracol}
+
+
+\AtEveryBibitem{
+   \clearfield{month}
+   \clearfield{series}
+   \clearfield{venue}
+   \clearname{editor}
+   \clearlist{publisher}
+   \clearlist{location} % alias to field 'address'
+   %\clearfield{doi}
+   \clearfield{url}
+   \clearfield{venue}
+   \clearfield{issn}
+   \clearfield{isbn}
+   \clearfield{urldate}
+   \clearfield{eventdate}
+   %\clearfield{pages}
+   %\clearfield{booktitle}
+   %\clearfield{journaltitle}
+   %\clearfield{number}
+   %\clearfield{volume}
+   \clearfield{date}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Kavi A. M. }{Dey}{ \urlstyle{same}\href{https://kavidey.wordpress.com}{\faGlobeAsia\  kavidey.wordpress.com} | \href{mailto:kaviasher@gmail.com}{\faEnvelope[regular]\  kaviasher@gmail.com} | 
+  \href{tel:412-370-0256}{ \faPhone 412.370.0256} | \href{https://github.com/KaviMD}{\faGithub} \href{https://www.linkedin.com/in/kavidey/}{\faLinkedin} \href{https://www.youtube.com/c/KaviDey}{\faYoutube} \href{https://vimeo.com/kavidey}{\faVimeo}
+} 
+
+\setlength{\columnsep}{8mm}
+\columnratio{0.35}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{paracol}{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Seattle Academy\hfill}
+\descript{High School}
+\location{June 2022 | Seattle, WA}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards} 
+\textbf{Robotics:}
+\begin{description}[style=multiline,nosep,leftmargin=1cm,font=\normalfont]
+\item[2021] \textbf{World Championship Top 10} \\ MATE  Telepresence Competition
+\item[2020] \textbf{Rookie All Star Award}, FRC: Redshift 8032
+\item[2020] \textbf{FRC Dean's List Semi-Finalist}
+\item[2018] \textbf{Regional Competition Top 5} \\ MATE Pacific Northwest Region 
+\end{description}
+\textbf{Film:} Four international youth film \\ festival awards
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Computer Science\hfill}
+Roboticist with experience
+in realtime embedded programming, data science, machine learning, 
+and fullstack development. \\
+%================
+\textbf{Expert:} Python \textbullet{} Typescript  \textbullet{}
+ Svelte \\
+%================
+\textbf{Intermediate:} THREE.js \textbullet{} C++ \textbullet{} ROS \\ 
+Pytorch \textbullet{} Pandas/Matplotlib \textbullet{} Unix \\
+%================
+\textbf{Familiar:}
+C \textbullet{} Android \textbullet{} SQL \textbullet{} Java
+\sectionsep
+
+\subsection{Electrical Engineering\hfill}
+Experience with end-to-end digital and analog circuit design, debugging and microcontroller programming. \\ 
+%================
+\textbf{Expert:} Soldering \\ 
+%================
+\textbf{Intermediate:}
+Schematic Capture \\
+Board Layout \textbullet{} Altium \textbullet{} Kicad \textbullet{} I2C \\
+Trapezoidal and Field-Oriented ESC Design \textbullet{} PIC Programming \textbullet{} MOSFETs
+%================
+%\textbf{Familiar}
+\sectionsep
+
+\subsection{Math}
+\textbf{Advanced studies including:} Proof Analysis; Linear algebra; Multivariable Calculus; Quantum Theory; Inverse Kinematics; Optimization; Machine Learning
+\sectionsep
+
+\subsection{Digital Art/ Filmmaking\hfill}
+Experience with multiple aspects of filmmaking including: Screenwriting; Producing; Directing; Editing; Cinematography; VFX \\
+\textbf{Software}: Houdini \textbullet{} Blender \textbullet{} Mari \\ 
+Zbrush \textbullet{} Substance Painter \textbullet{} Nuke \\
+Premiere Pro \textbullet{} Davinci Resolve \\ Renderman \textbullet{} After Effects \textbullet{} Audition
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\switchcolumn
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{FIRST FRC Robotics}
+\descript{| '20-'22 Team Lead | '19 Code Lead }
+\runsubsection{MATE Robotics}
+\descript{| '20-'22 Team Lead | '18-'19 Code + Electric. Lead}
+\location{Sep 2019 - Present | Seattle, WA}
+\vspace{\topsep}
+\begin{tightemize}
+\item Managed 30+ person team in remote and in person settings (FRC)
+\item Cultivated diverse leaders and supportive culture (Both)
+\item Improved team documentation and communication strategies (Both)
+\item Built multi-node realtime custom communication system and UI (MATE)
+\item Led team effort to build functional underwater robot from scratch (MATE)
+\end{tightemize}
+\sectionsep
+
+\runsubsection{ESC Design}
+\descript{| Project Lead }
+\location{June 2020 – Present | Seattle, WA}
+\vspace{-.05cm} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Led team design of brushless motor ESC from scratch. 
+\item Taught college level electrical engineering and brushless motor control theory, schematic design, PCB design and microcontroller programming.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{PPE-Exchange}
+\descript{| Lead Developer }
+\location{Mar 2020 - June 2021 | Seattle, WA}
+\begin{tightemize}
+\item Led  development of full stack website for Washington State Hospital Association to help hospitals exchange needed PPE during COVID-19.
+\item Built custom PPE-Distribution algorithm with input from MultiCare
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Adobe}
+\descript{| Intern}
+\location{Jul 2018 | Seattle, WA}
+\begin{tightemize}
+\item Built ultra-lightweight ML speech detection classifier for Character Animator. 
+\item Name added to developer credits in recognition of contribution.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{UW Human-Centered Robotics Lab}
+\descript{| Intern}
+\location{2018; 2020-2022 | Seattle, WA}
+Worked with \textbf{\href{https://homes.cs.washington.edu/~mcakmak/}{Prof Maya Cakmak}} and \textbf{\href{https://marucabrera.wixsite.com/homepage}{Maria E. Cabrera}} to develop accessible robot tele-operation interfaces. Helped with data analysis of user studies \cite{CabreraBDC21}. Led interface design and studies of interface alternatives. Co-first authored  \cite{CabreraDKBC21}.
+\sectionsep
+
+\runsubsection{UW Makeability Lab}
+\descript{| Intern}
+\location{2019 | Seattle, WA}
+Worked with \textbf{\href{https://athersharif.me}{Ather Sharif}} and \textbf{\href{https://makeabilitylab.cs.washington.edu/member/jonfroehlich/}{Prof Jon Froehlich}} on \textbf{\href{https://makeabilitylab.cs.washington.edu/project/sidewalk/}{Project Sidewalk}}. Integrated deep learning-based curb-ramp detection into temporal tracking of sidewalk quality to help those with mobility impairments. \cite{SharifGSBFWDF21}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications} 
+\nocite{*}
+\printbibliography[heading=none]
+
+\end{paracol}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+
+\end{document}  \documentclass[]{article}
