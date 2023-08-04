@@ -28,6 +28,7 @@
 
 \usepackage{biblatex}
 \addbibresource{publications.bib}
+\bibliographystyle{apalike} 
 
 \usepackage{hyperref}
 
@@ -113,6 +114,11 @@
 
 \end{cvsection}
 
+\begin{cvsection}{Publications}
+\nocite{*}
+	\printbibliography[heading=none]
+\end{cvsection}
+
 \begin{cvsection}{Languages and Technologies}
 	\begin{cvsubsection}{}{}{}
 		\begin{itemize}
@@ -150,7 +156,6 @@
 			\item[2018] \textbf{Regional Competition Top 5} MATE Pacific Northwest Region
 		\end{itemize}
 	\end{cvsubsection}
-	\printbibliography[heading=none]
 \end{cvsection}
 
 \end{document}
