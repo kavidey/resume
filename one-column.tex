@@ -26,9 +26,8 @@
 % For mathematical symbols
 \usepackage{amsmath}
 
-\usepackage{biblatex}
-\addbibresource{publications.bib}
-\bibliographystyle{apalike} 
+\usepackage[square]{natbib}
+\bibliographystyle{plainnat} 
 
 \usepackage{hyperref}
 
@@ -40,6 +39,11 @@
 \contacts{(412) 370-0256 \linebreak kaviasher@gmail.com}
 \github{github.com/kavidey}
 
+% Aliases to cite by conference, year
+\defcitealias{CabreraBDC21}{IEEE RO'MAN 2021 Paper}
+\defcitealias{CabreraDKBC21}{IEEE IROS 2021 Co-First Authored Paper}
+\defcitealias{SharifGSBFWDF21}{ACM ASSETS 2021 Poster}
+
 \begin{document}
 
 % Print the header
@@ -48,100 +52,95 @@
 % Print the content
 
 \begin{cvsection}{Education}
-	\begin{cvsubsection}{Harvey Mudd College}{Claremont, CA}{Aug 2022 -- May 2026}
+	\begin{cvsubsection}{Harvey Mudd College (HMC)}{Claremont, CA}{Aug 2022 -- May 2026}
 		\begin{itemize}
-			\item \textbf{B.S. in Computer Science, GPA: 3.7}
+			\item B.S. in Computer Science%, GPA: 3.7
 		\end{itemize}
 	\end{cvsubsection}
-	\begin{cvsubsection}{Seattle Academy High School}{Seattle, WA}{Jan 2019 -- June 2022}
+	\begin{cvsubsection}{Seattle Academy High School (SAAS)}{Seattle, WA}{Jan 2019 -- June 2022}
 		\begin{itemize}
-			\item \textbf{High School Diploma, GPA: 4.13}, High Honor Roll
+			\item High School Diploma, High Honor Roll%, GPA: 4.13, High Honor Roll
 		\end{itemize}
 	\end{cvsubsection}
 \end{cvsection}
 
-\begin{cvsection}{Experience}
-	\begin{cvsubsection}{Music Information Retrieval Lab}{Harvey Mudd College}{2023}
+\begin{cvsection}{Employment}
+	\begin{cvsubsection}{Summer 2023}{Audio Information Retrieval}{Prof Tsai, MIR Lab, Harvey Mudd College}
+		\textbf{Goal:} To train large language models to understand and classify music data; Audio tampering detection
 		\begin{itemize}
-			\item Applied state of the art NLP techniques augmented with web scraping for zero shot composer classification
+			%\item Zero-shot composer Classification State of the art NLP techniques augmented with web scraping
 			\item Developed novel online alignment algorithms for 3 way audio alignment of piano concertos
 			\item Lead data collection and created new audio tampering detection systems
+			\item Two publications in preparation
 		\end{itemize}
 	\end{cvsubsection}
-	\begin{cvsubsection}{Analog Circuit Engineering Lab}{Harvey Mudd College}{2023}
-		\begin{itemize}
-			\item Lead low level embedded development on SAM-4 MCU (SPI \& Ethernet). Tested ultrasonic beam forming sonar
-		\end{itemize}
-	\end{cvsubsection}
-	\begin{cvsubsection}{Bee Lab}{Harvey Mudd College}{2022}
-		\begin{itemize}
-			\item Built robust pollen detection system. Trained zero shot species classification (Siamese Net \& ResNet transfer learning).
-			\item Collaborated with professional biologists \& developed public website to share the model
-			\item Wrote \href{https://hmcbee.blogspot.com/2022/12/blue-bees-twin-neural-networks-and-more.html}{article} explaining the basics of siamese nets
-		\end{itemize}
-	\end{cvsubsection}
-	\begin{cvsubsection}{Human Centered Robotics Lab}{University of Washington}{2018; 2020 - 2022}
+	\begin{cvsubsection}{2020-2022}{Robotic Tele-Operation}{Prof. Cakmak, HCR Lab, University of Washington}
+		\textbf{Goal:} To develop accessible robot tele-operation interfaces 
 		%iChat AV			
 		\begin{itemize}
-			\item Worked with Prof Maya Cakmak and Maria E. Cabrera to develop accessible robot tele-operation interfaces
-			\item Performed data analysis of user studies \cite{CabreraBDC21}. (2021)
-			\item Led interface design and studies of interface alternatives. Co-first authored  \cite{CabreraDKBC21}.
-			\item Lead research in programming by demonstration \& mentored 5 undergraduates across 3 differnet projects (2022)
+			\item Performed data analysis of user studies \citepalias{CabreraBDC21}. 
+			\item Led interface design and studies of interface alternatives. Co-first authored  \citepalias{CabreraDKBC21}.
+			\item Led research in programming by demonstration \& human-in-the-loop object grasping and manipulation approach
+			\item Mentored 5 undergraduates across 3 different projects
 		\end{itemize}
 	\end{cvsubsection}
+\end{cvsection}
 
-	\begin{cvsubsection}{Makeability Lab}{University of Washington}{2019}
+\begin{cvsection}{Other Internships and Research}
+	\begin{cvsubsection}{2023}{Embedded Programming}{Prof. Spencer, ACE Lab, HMC}
+		\textbf{Goal:}  Revise and test ultrasonic beam forming sonar sensor. Led low level embedded development on SAM-4 MCU. Implemented embedded
+		communication protocol for talking to an Ethernet chip using SPI 
+	\end{cvsubsection}
+	\begin{cvsubsection}{2022}{Zero-shot Image Classification}{Prof. Carr-Markell, Bee Lab, HMC}
+	    \textbf{Goal:} Pollen detection and classification (translational ML work with biologists)
 		\begin{itemize}
-			\item Worked with Ather Sharif and Prof Jon Froehlich on Project Sidewalk (makeabilitylab.cs.washington.edu/project/sidewalk).
-			\item Integrated deep learning curb-ramp detection into temporal tracking of sidewalk quality to help those with \\ mobility impairments. \cite{SharifGSBFWDF21}
+			\item Trained zero shot  classifier using Siamese Net \& ResNet transfer learning.
+			\item Developed public website to share the model and \href{https://hmcbee.blogspot.com/2022/12/blue-bees-twin-neural-networks-and-more.html}{blog post} explaining the basics of siamese nets and auto encoders.
 		\end{itemize}
 	\end{cvsubsection}
-
-	\begin{cvsubsection}{Intern}{Adobe}{2018}
-		\begin{itemize}
-			\item Programmed ultra-lightweight ML speech detection classifier for Character Animator, added to developer credits
-		\end{itemize}
+	\begin{cvsubsection}{2020-2021}{Full Stack Web Development}{WA State Hospital Association}
+		\textbf{Goal:} Develop custom Personal Protective Equipment exchange website to help address COVID shortages. Engineered custom PPE-Distribution algorithm with input from  MultiCare Hospital.
+	\end{cvsubsection}
+	\begin{cvsubsection}{2019}{Deep Learning}{Prof. Froehlich, Makeability Lab, UW}
+		\textbf{Goal:} Integrate deep learning into curb-ramp detection to improve temporal tracking of sidewalk quality to improve transparency about sidewalk accessibility
+		\citepalias{SharifGSBFWDF21}
 	\end{cvsubsection}
 
-	\begin{cvsubsection}{MATE \& FRC Robotics}{Seattle Academy High School}{2019-2022}
-		\begin{itemize}
-			\item FIRST FRC:  '20-'22 Team Lead,  '19 Code Lead | MATE: '20-'22 Team Lead, '18-'19 Code + Electrical Lead
-			\item Cultivated diverse leaders and supportive culture, enhanced team documentation and communication strategies
-			\item Spearheaded 30+ person team in remote and in person settings (FRC)
-			\item Developed multi-node realtime communication system and UI, led team effort to build underwater robot (MATE)
-		\end{itemize}
+	\begin{cvsubsection}{2018}{Voice Activity Detection}{Adobe}
+		\textbf{Goal:} Develop ultra-lightweight ML speech detection classifier for Character Animator. Added to developer credits
 	\end{cvsubsection}
-
 \end{cvsection}
 
 \begin{cvsection}{Publications}
-\nocite{*}
-	\printbibliography[heading=none]
+%\nocite{*}
+\bibliography{publications.bib}
+\end{cvsection}
+
+\newpage
+
+\begin{cvsection}{Significant Projects}
+	\begin{cvsubsection}{2020-2023}{Electronic Speed Control (ESC) Design}{SAAS}
+		\textbf{Goal:} Design and manufacture custom brushless motor ESC. Led team (3 high school students); Taught college level electrical engineering and brushless motor control theory, schematic design, PCB design, microcontroller programming
+	\end{cvsubsection}
+	\begin{cvsubsection}{2019-2022}{Team Lead; ECE Lead}{MATE \& FRC Robotics, SAAS}
+		\textbf{Goal:} Build for and compete in national robotics competitions
+		\begin{itemize}
+			%\item FIRST FRC:  '20-'22 Team Lead,  '19 Code Lead | MATE: '20-'22 Team Lead, '18-'19 Code + Electrical Lead
+			\item Led 30+ person team in remote and in person settings with focus on culture, education and diversity
+			%\item Cultivated diverse leaders and supportive culture, enhanced team documentation and communication strategies
+			\item Developed multi-node realtime communication system and UI, enhanced documentation and process, led team effort to build underwater robot.
+		\end{itemize}
+	\end{cvsubsection}
 \end{cvsection}
 
 \begin{cvsection}{Languages and Technologies}
 	\begin{cvsubsection}{}{}{}
 		\begin{itemize}
 			\item \textbf{Expert:} Python, Typescript, Svelte, Pytorch, Pandas/Matplotlib
-			\item \textbf{Intermediate:} THREE.js, C++, ROS, Unix, Compiler Design, Latex
+			\item \textbf{Intermediate:} THREE.js, C++, ROS, Unix, Compiler Design, LaTeX, Verilog
 			\item \textbf{Engineering:} Schematic Capture, Board Layout, Altium, I2C,
 			      Trapezoidal and Field-Oriented ESC Design, \\ PIC Programming, MOSFETs, Solidworks
 			\item \textbf{Advanced studies including:} Proof Based Real Analysis; Linear Algebra; Multivariable Calculus; Quantum Theory; \\ Inverse Kinematics; Optimization; Machine Learning
-		\end{itemize}
-	\end{cvsubsection}
-\end{cvsection}
-
-\begin{cvsection}{Personal Projects}
-	\begin{cvsubsection}{Electronic Speed Control (ESC) Design}{Project Lead}{2020 - 2023}
-		\begin{itemize}
-			\item Directed team (3 high school students) design of brushless motor ESC
-			\item Taught college level electrical engineering and brushless motor control theory, schematic design, PCB design, microcontroller programming
-		\end{itemize}
-	\end{cvsubsection}
-	\begin{cvsubsection}{PPE-Exchange}{Lead Developer}{Mar 2020 - June 2021}
-		\begin{itemize}
-			\item Orchestrated development of full stack website for Washington State Hospital Association to help hospitals (50+) \\ exchange needed PPE during COVID-19
-			\item Engineered custom PPE-Distribution algorithm with input from MultiCare
 		\end{itemize}
 	\end{cvsubsection}
 \end{cvsection}
@@ -159,3 +158,7 @@
 \end{cvsection}
 
 \end{document}
+
+% get rid of references title
+% condense robotic teleoperation
+% add additional projects: hmmm compiler and silicon
