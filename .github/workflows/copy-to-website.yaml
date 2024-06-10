@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main # Trigger the workflow on commits to the main branch
+    paths:
+    - public/assets/resume.pdf
 
 jobs:
   copy-file:
@@ -16,9 +18,9 @@ jobs:
     - name: Checkout target repository
       uses: actions/checkout@v3
       with:
-        repository: target-owner/target-repo
+        repository: kavidey/personal-website
         token: ${{ secrets.TARGET_REPO_PAT }}
-        path: target-repo
+        path: personal-website
 
     - name: Copy file
       run: |
@@ -26,15 +28,15 @@ jobs:
 
     - name: Commit changes
       run: |
-        cd target-repo
+        cd personal-website
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add public/assets/resume.pdf
-        git commit -m 'Copy resume from source repo on commit'
+        git commit -m 'Copy resume from source repo on commit' || echo "No changes to commit"
 
     - name: Push changes
       run: |
-        cd target-repo
+        cd personal-website
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.TARGET_REPO_PAT }}
