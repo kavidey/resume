@@ -4,7 +4,7 @@ name: Copy file to personal-website
     branches:
       - main
     paths:
-      - public/assets/resume.pdf
+      - one-column.pdf
   workflow_dispatch:
 
 jobs:
@@ -23,18 +23,13 @@ jobs:
         run: |
           cp one-column.pdf personal-website/public/assets/resume.pdf
       - name: Commit changes
-        run: >
+        run:
           cd personal-website
-
           git config --global user.name 'github-actions[bot]'
-
-          git config --global user.email
-          'github-actions[bot]@users.noreply.github.com'
-
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add public/assets/resume.pdf
+          git commit -m 'Copy resume from source repo on commit' || echo "No changes to commit"
 
-          git commit -m 'Copy resume from source repo on commit' || echo "No
-          changes to commit"
       - name: Push changes
         run: |
           cd personal-website
