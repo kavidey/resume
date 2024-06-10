@@ -1,42 +1,43 @@
 name: Copy File to Another Repo
-
-on:
+'on':
   push:
     branches:
-      - main # Trigger the workflow on commits to the main branch
+      - main
     paths:
-    - public/assets/resume.pdf
+      - public/assets/resume.pdf
+  workflow_dispatch:
 
 jobs:
   copy-file:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout source repository
-      uses: actions/checkout@v3
+      - name: Checkout source repository
+        uses: actions/checkout@v3
+      - name: Checkout target repository
+        uses: actions/checkout@v3
+        with:
+          repository: kavidey/personal-website
+          token: '${{ secrets.TARGET_REPO_PAT }}'
+          path: personal-website
+      - name: Copy file
+        run: |
+          cp one-column.pdf personal-website/public/assets/resume.pdf
+      - name: Commit changes
+        run: >
+          cd personal-website
 
-    - name: Checkout target repository
-      uses: actions/checkout@v3
-      with:
-        repository: kavidey/personal-website
-        token: ${{ secrets.TARGET_REPO_PAT }}
-        path: personal-website
+          git config --global user.name 'github-actions[bot]'
 
-    - name: Copy file
-      run: |
-        cp one-column.pdf personal-website/public/assets/resume.pdf
+          git config --global user.email
+          'github-actions[bot]@users.noreply.github.com'
 
-    - name: Commit changes
-      run: |
-        cd personal-website
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add public/assets/resume.pdf
-        git commit -m 'Copy resume from source repo on commit' || echo "No changes to commit"
+          git add public/assets/resume.pdf
 
-    - name: Push changes
-      run: |
-        cd personal-website
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.TARGET_REPO_PAT }}
+          git commit -m 'Copy resume from source repo on commit' || echo "No
+          changes to commit"
+      - name: Push changes
+        run: |
+          cd personal-website
+          git push
+        env:
+          GITHUB_TOKEN: '${{ secrets.TARGET_REPO_PAT }}'
