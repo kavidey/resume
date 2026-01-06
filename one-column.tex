@@ -46,113 +46,113 @@
 % Aliases to cite by conference, year
 \defcitealias{CabreraBDC21}{IEEE RO'MAN 2021 Paper}
 \defcitealias{CabreraDKBC21}{IEEE IROS 2021 Co-First Authored Paper}
-\defcitealias{SharifGSBFWDF21}{ACM ASSETS 2021 Poster}
+\defcitealias{SharifGSBFWDF21}{ACM ASSETS 2021 Poster Paper}
 \defcitealias{TsaiKD25}{IEEE ICASSP 2025 First Student Author Paper}
 
 \begin{document}
 
-% Print the header
 \makeheader
 
-% Print the content
+\vspace{-0.1in}
 
 \begin{cvsection}{Education}
 	\begin{cvsubsection}{Harvey Mudd College (HMC)}{Claremont, CA}{Aug 2022 -- May 2026}
 		\begin{itemize}
-			\item B.S. in Computer Science%, GPA: 3.7
+			\item B.S. in Physics, Dean's List FA22-SP25, Major GPA: 3.91, Overall GPA: 3.88
 		\end{itemize}
 	\end{cvsubsection}
 	\begin{cvsubsection}{Seattle Academy High School (SAAS)}{Seattle, WA}{Jan 2019 -- June 2022}
-		\begin{itemize}
-			\item High School Diploma, High Honor Roll%, GPA: 4.13, High Honor Roll
-		\end{itemize}
+		% \begin{itemize}
+		% 	\item High School Diploma, High Honor Roll%, GPA: 4.13, High Honor Roll
+		% \end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+\vspace{-1em}
+\begin{cvsection}{Research}
+	\begin{cvsubsection}{Spring 2025 - Current}{Computational Orbit Modelling}{Dan Tamayo, POEL Lab, HMC}
+		Using machine learning and optimization techniques to model planet and asteroid orbits and find transforms to action-angle coordinates.
+		Active research on using dimensionality reduction algorithms to find conserved quantities.
+		One publication in preparation on using classical ML to predict proper orbital elemnents for asteroid.
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{Spring 2024 - Current}{Variational Deep Learning}{Gabe Hope, Hope Lab, HMC}
+		Foundational ML research using graphical models as a prior for variational autoencoders (SVAE).
+		Developing and implementing novel algorithms for Multi Object Tracking and non-linear sequence modeling. Working towards publication.
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{Summer 2024}{fMRI to Image Brain Decoding}{Helen Zhou, MNNDL Lab, National University of Singapore}
+			Developed several novel fMRI encoder and diffusion training strategies to improve \\ reconstruction performance.
+			Reverse engineered fMRI encoders for model interpretability and understanding. One publication in preparation.
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{Spring 2023}{Embedded Programming}{Matthew Spencer, ACE Lab, HMC}
+		Revised and tested ultrasonic beam forming sonar sensor. Led low level embedded development on SAM-4 MCU. Implemented embedded communication protocol for talking to an Ethernet chip using SPI.
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{Summer 2023}{Audio Information Retrieval}{TJ Tsai, MIR Lab, HMC}
+		Developed novel online alignment algorithms for 3 way audio alignment of piano concertos \citepalias{TsaiKD25}.
+		Lead data collection and created new audio tampering detection algorithms.
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{Fall 2022}{Zero-shot Image Classification}{Morgan Carr-Markell, Bee Lab, HMC}
+		Implemented pollen detection and classification algorithms (translational ML work with biologists).
+		Trained zero shot classifier using Siamese Net \& ResNet transfer learning. Developed public website to share the model and \href{https://hmcbee.blogspot.com/2022/12/blue-bees-twin-neural-networks-and-more.html}{blog post} explaining the basics of siamese nets and auto encoders (\texttt{kavidey.com/l/bee-post})
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{2020-2022}{Robotic Tele-Operation}{Maya Cakmak, HCR Lab, University of Washington}
+		Developed accessible robot tele-operation interfaces.
+		Led interface design and studies of interface \\ alternatives and ran 200+ person online user study. Co-first authored  \citepalias{CabreraDKBC21}.
+		Modeled interaction pattern analysis \citepalias{CabreraBDC21}.
+		Led research in programming by demonstration \& human-in-the-loop object grasping and manipulation approach.
+		Mentored 5 undergraduates across 3 different projects.
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{Summer 2019}{Deep Learning}{Jon Froehlich, Makeability Lab, University of Washington}
+		\textbf{Goal:} Integrated deep learning into curb-ramp detection to improve temporal tracking of \\ sidewalk quality to improve transparency about sidewalk accessibility
+		\citepalias{SharifGSBFWDF21}
 	\end{cvsubsection}
 \end{cvsection}
 
-\begin{cvsection}{Employment, Internships, \& Research}
-	\begin{cvsubsection}{2025 - Current}{Computational Orbit Modelling}{Prof. Tamayo, POEL Lab, HMC}
-		\textbf{Goal:} Using machine learning and optimization techniques to model planet and asteroid orbits and find transforms to action-angle coordinates. One publication in preparation.
-	\end{cvsubsection}
-
-	\begin{cvsubsection}{2024 - Current}{Variational Deep Learning}{Prof. Hope, Hope Lab, HMC}
-		\textbf{Goal:} Learned about and implemented SVAEs with a variety of priors. Integrated state space models with linear dynamical system prior in SVAE. Working towards publication
-	\end{cvsubsection}
-
-	\begin{cvsubsection}{Summer 2024}{fMRI to Image Brain Decoding}{Prof. Helen Zhou, MNNDL Lab, National University of Singapore}
-		\vspace{-0.2em}
-		\textbf{Goal:} Improve fMRI conditioned diffusion image generation; ML interpretability
-		\begin{itemize}
-			\item Developed several novel fMRI encoder and diffusion training strategies to improve reconstruction performance
-			\item Reverse engineered fMRI encoders for model interpretability and understanding
-			% \item One publication in preparation
-		\end{itemize}
+\begin{cvsection}{Employment}
+	\begin{cvsubsection}{2024 - Current}{Engineering TA \& Grader}{Machine Shop, HMC}
+		\vspace{0.2em}
+		\textbf{Responsibilities:} TA'd several intro and advanced engineering classes. Organized grading for 100 person class. Developed a new lab for advanced digital engineering class.
 	\end{cvsubsection}
 
 	\begin{cvsubsection}{2023 - Current}{Machine Shop Proctor}{Machine Shop, HMC}
 		\vspace{0.2em}
-		\textbf{Responsibilities:} Ensuring student safety while teaching usage of metal manufacturing (Mills \& Lathes, both CNC \& manual) and wood working (bandsaws, routers, planers, etc.). Starting spring 2024: additional role as \textit{Shop Improvement Proctor}. Responsibilities include weekly machine maintenance and repair, and upgrading tooling
+		\textbf{Responsibilities:} Ensuring student safety while teaching usage of metal manufacturing (Mills \& Lathes, both CNC \& manual) and wood working.
+		Spring 2024: additional role as \textit{Shop Improvement Proctor} (weekly machine maintenance and repair, and upgrading tooling).
 	\end{cvsubsection}
 
-	\begin{cvsubsection}{2023}{Embedded Programming}{Prof. Spencer, ACE Lab, HMC}
-		\textbf{Goal:}  Revise and test ultrasonic beam forming sonar sensor. Led low level embedded development on SAM-4 MCU. Implemented embedded
-		communication protocol for talking to an Ethernet chip using SPI
-	\end{cvsubsection}
-
-	\begin{cvsubsection}{2023}{Makerspace Steward}{Makerspace, HMC}
+	\begin{cvsubsection}{2023-2024}{Makerspace Steward}{Makerspace, HMC}
 		\vspace{0.2em}
 		\textbf{Responsibilities:} Helping students learn and use 3D printers (FDM, SLS, Carbon, \& Resin), laser cutters, sewing \& embroidery machines, looms, welders, spray paint, and more; running workshops (15+ people). Starting spring 2024: Additional role as \textit{Makerspace Repair Steward}, weekly preventative maintainance and repair on laser cutters and 3d printers
 	\end{cvsubsection}
 
 	\begin{cvsubsection}{2023}{Computer Science TA \& Grader}{CS Department, HMC}
 		\vspace{0.2em}
-		\textbf{Responsibilities:} Taught new and experienced students computer science concepts (low level programming, classes, functional programming, data science, graphics, etc.). Graded weekly homework assignments and created midterm study guide
+		\textbf{Responsibilities:} Taught new and experienced students computer science concepts (low level programming, classes, functional programming, data science, graphics, etc.). Graded homework and created midterm study guide
 	\end{cvsubsection}
-
-	\begin{cvsubsection}{Summer 2023}{Audio Information Retrieval}{Prof. Tsai, MIR Lab, HMC}
-		\textbf{Goal:} To train large language models to understand and classify music data; Audio tampering detection
-		\begin{itemize}
-			%\item Zero-shot composer Classification State of the art NLP techniques augmented with web scraping
-			\item Developed novel online alignment algorithms for 3 way audio alignment of piano concertos \citepalias{TsaiKD25}.
-			\item Lead data collection and created new audio tampering detection systems
-			% \item One publication in submission to ISMIR 2024
-		\end{itemize}
-	\end{cvsubsection}
-
-	\begin{cvsubsection}{2022}{Zero-shot Image Classification}{Prof. Carr-Markell, Bee Lab, HMC}
-		\textbf{Goal:} Pollen detection and classification (translational ML work with biologists). Trained zero shot classifier using Siamese Net \& ResNet transfer learning. Developed public website to share the model and \href{https://hmcbee.blogspot.com/2022/12/blue-bees-twin-neural-networks-and-more.html}{blog post} explaining the basics of siamese nets and auto encoders
-	\end{cvsubsection}
-
-	\begin{cvsubsection}{2020-2022}{Robotic Tele-Operation}{Prof. Cakmak, HCR Lab, University of Washington}
-		\textbf{Goal:} To develop accessible robot tele-operation interfaces
-		\begin{itemize}
-			\item Performed data analysis of user studies \citepalias{CabreraBDC21}.
-			\item Led interface design and studies of interface alternatives. Co-first authored  \citepalias{CabreraDKBC21}.
-			\item Led research in programming by demonstration \& human-in-the-loop object grasping and manipulation approach
-			\item Mentored 5 undergraduates across 3 different projects
-		\end{itemize}
-	\end{cvsubsection}
-
+\newpage
 	\begin{cvsubsection}{2020-2021}{Full Stack Web Development}{WA State Hospital Association}
 		\textbf{Goal:} Develop custom Personal Protective Equipment exchange website to help address COVID shortages. Engineered custom PPE-Distribution algorithm with input from  MultiCare Hospital.
 	\end{cvsubsection}
-
-	\begin{cvsubsection}{2019}{Deep Learning}{Prof. Froehlich, Makeability Lab, UW}
-		\textbf{Goal:} Integrate deep learning into curb-ramp detection to improve temporal tracking of sidewalk quality to improve transparency about sidewalk accessibility
-		\citepalias{SharifGSBFWDF21}
-	\end{cvsubsection}
-
-	\begin{cvsubsection}{2018}{Voice Activity Detection}{Adobe}
-		\textbf{Goal:} Develop ultra-lightweight ML speech detection classifier for Character Animator. Added to developer credits
-	\end{cvsubsection}
+	% \begin{cvsubsection}{2018}{Voice Activity Detection}{Adobe}
+	% 	\textbf{Goal:} Develop ultra-lightweight ML speech detection classifier for Character Animator. Added to developer credits
+	% \end{cvsubsection}
 \end{cvsection}
 % \newpage
 
 \begin{cvsection}{Publications}
+	\textbf{Kavi Dey}, Leia Shen, Kat Volk, Sam Hadden, and Dan Tamayo. Predicting Asteroid Proper elements with linear estimation and regression.
+	The Astrophysical Journal. \textbf{In preparation, author order \& title not finalized.}
 	% This is a hack to hide the "References" title generated by natbib
 	% unfortunately each bib entry needs to be added manually
 	% https://tex.stackexchange.com/questions/229895/is-there-a-way-to-hide-the-bibliography-references-section-altogether
 
 	\nobibliography{publications.bib}
+
 	\bibentry{Glazko26}
 
 	\bibentry{TsaiKD25}
@@ -167,15 +167,15 @@
 \begin{cvsection}{Additional Experience and Awards}
 	\begin{cvsubsection}{}{}{}
 		\begin{itemize}
-			\item[2025] \textbf{Astronaut Scholar}
+			\item[2026] \textbf{CRA Honorable Mention}
+			\item[2024] \hspace{-0.5em} \& 2025 \textbf{Astronaut Scholar}
 			\item[2024] \textbf{HMC J. R. Phillips Award} Awarded for \hyperlink{doppler_velocity_log}{doppler velocity log}
-			\item[2024] \textbf{Astronaut Scholar}
-			\item[2023] \textbf{HMC Davies Engineering Prize} Awarded for \hyperlink{trebuchet_design}{trebuchet design}
+			\item[2023] \textbf{HMC Davies Engineering Prize} %Awarded for \hyperlink{trebuchet_design}{trebuchet design}
 			\item[2022] \textbf{Harvey S. Mudd Merit Award}
-			\item[2021] \textbf{World Championship Top 10} MATE  Telepresence Competition
-			\item[2020] \textbf{Rookie All Star Award}, FRC: Redshift 8032
+			% \item[2021] \textbf{World Championship Top 10} MATE  Telepresence Competition
+			% \item[2020] \textbf{Rookie All Star Award}, FRC: Redshift 8032
 			\item[2020] \textbf{FRC Dean's List Semi-Finalist}
-			\item[2018] \textbf{Regional Competition Top 5} MATE Pacific Northwest Region
+			% \item[2018] \textbf{Regional Competition Top 5} MATE Pacific Northwest Region
 		\end{itemize}
 	\end{cvsubsection}
 \end{cvsection}
@@ -184,20 +184,20 @@
 	\begin{cvsubsection}{2024 - Current}{Synthetic Opals}{HMC}
 		\textbf{Goal:} Manufacture synthetic opals
 		\begin{itemize}
-			\item Learned about science behind opals and nano particles (St\"ober process, Bragg diffraction, and structural color) and wrote lab manual.
-			\item Working with HMC chemistry department to carry out procedure and make opals and HMC engineering department to design 7 MPa, 300 $^\circ$C autoclave for sintering opals
+			\item Learned about science behind opals and nano particles (St\"ober process, Bragg diffraction, and structural color).
+			\item Worked with HMC chemistry department to manufacture opals. Actively working with HMC engineering department to design 7 MPa, 300 $^\circ$C autoclave for sintering opals
 		\end{itemize}
-		\href{https://kavidey.notion.site/SNPs-Synthetic-Opals-Lab-Manual-648f35746e4c405987239699e7e6bfce?pvs=4/}{\faBook \ Lab Manual}
+		\href{https://kavidey.notion.site/SNPs-Synthetic-Opals-Lab-Manual-648f35746e4c405987239699e7e6bfce?pvs=4/}{\faBook \ Lab Manual} \texttt{kavidey.com/l/opal-manual}
 	\end{cvsubsection}
 	\begin{cvsubsection}{2024}{\hypertarget{doppler_velocity_log}{Doppler Velocity Log}}{HMC}
 		\textbf{Goal:} Design and manufacture doppler velocity log
 		\begin{itemize}
 			\item Designed and manufactured custom piezoelectric transducer with good acoustic properties
-			\item Created circuit with high speed h-bridge driver, TX/RX switch, differential analog receive circuitry, and high speed (10 Msps) ADC.
+			\item Created circuit with high speed h-bridge driver, TX/RX switch, differential analog receive circuitry, and high speed ADC.
 			\item Implementing I2C communication and FFT on an FPGA which will control the circuit and transducers
 		\end{itemize}
-		\href{https://kavidey.com/assets/projects/dvl/e80_report.pdf}{\faBook \ Report}
-		\href{https://docs.google.com/document/d/18yRygu0o4ie6aZtUGPSXawOBYlJCxya42LHkkw6iH5E/edit}{\faBook \ Documentation}
+		\href{https://kavidey.com/assets/projects/dvl/e80_report.pdf}{\faBook \ Report} \texttt{kavidey.com/l/e80-report}
+		\href{https://docs.google.com/document/d/18yRygu0o4ie6aZtUGPSXawOBYlJCxya42LHkkw6iH5E/edit}{\faBook \ Documentation} \texttt{kavidey.com/l/dvl-docs}
 	\end{cvsubsection}
 	\begin{cvsubsection}{2023-2024}{Digital Camera Sensor}{HMC}
 		\textbf{Goal:} Design and manufacture digital sensor completely from scratch
@@ -206,51 +206,51 @@
 			\item Led 3 person team in implementing QOI image compression and debayering on an FPGA
 			\item Interfaced with camera sensor and FPGA using an STM32 microcontroller to use it as a USB webcam.
 		\end{itemize}
-		\href{https://www.youtube.com/shorts/lJYW2ZMiyLE}{\faYoutube \ Video Demo}
-		\href{https://kavidey.github.io/NeoObscura/}{\faBook \ Documentation}
+		\href{https://www.youtube.com/shorts/lJYW2ZMiyLE}{\faYoutube \ Video Demo} \texttt{kavidey.com/l/camera-video}
+		\href{https://kavidey.github.io/NeoObscura/}{\faBook \ Documentation} \texttt{kavidey.com/l/camera-docs}
 	\end{cvsubsection}
-	\begin{cvsubsection}{Spring 2023}{\hypertarget{trebuchet_design}{Trebuchet Design}}{HMC}
-		\textbf{Goal:} Worked for external client with limited budget to design method of removing waste equipment from abandoned uranium mine.
-		Led team of 4 students; simulated, prototyped and designed a 10ft tall trebuchet capable of launching 25 lb projectile 300 ft.
-		% Project done for HMC's E4: Introduction to Engineering Design and Manufacturing class.
-	\end{cvsubsection}
+	% \begin{cvsubsection}{Spring 2023}{\hypertarget{trebuchet_design}{Trebuchet Design}}{HMC}
+	% 	\textbf{Goal:} Worked for external client with limited budget to design method of removing waste equipment from abandoned uranium mine.
+	% 	Led team of 4 students; simulated, prototyped and designed a 10ft tall trebuchet capable of launching 25 lb projectile 300 ft.
+	% 	% Project done for HMC's E4: Introduction to Engineering Design and Manufacturing class.
+	% \end{cvsubsection}
 	% \newpage
 	\begin{cvsubsection}{2022-2023}{Compiler \& Silicon Design}{HMC}
 		\textbf{Goal:} Design and implement a C to assembly compiler and associated processor in Verilog
 		\begin{itemize}
-			\item Designed and implemented a compiler for a subset of C. Compiler supports control flow, recursion, register allocation, and stack allocation.
+			\item Designed and implemented a compiler for a subset of C. Compiler supports control flow, recursion, register allocation, liveness analysis, and using the stack.
 			\item Designed a processor in Verilog with support for the compiler's assembly language
 		\end{itemize}
-		\href{https://github.com/kavidey/HMMM-Compiler/}{\faGithub \ Compiler Github}
-		\href{https://github.com/kavidey/Hmmm-Silicon/tree/main/verilog/rtl/hmmm/}{\faGithub \ Processor Github}
+		\href{https://github.com/kavidey/HMMM-Compiler/}{\faGithub \ Compiler Github} \texttt{kavidey.com/l/compiler-code}
+		\href{https://github.com/kavidey/Hmmm-Silicon/tree/main/verilog/rtl/hmmm/}{\faGithub \ Processor Github} \texttt{kavidey.com/l/processor-code}
 	\end{cvsubsection}
-	\begin{cvsubsection}{2020-2023}{Electronic Speed Control (ESC) Design}{SAAS}
-		\textbf{Goal:} Design and manufacture custom brushless motor ESC. Led team (3 high school students); Taught college level electrical engineering and brushless motor control theory, schematic design, PCB design, microcontroller programming
-		\\
-		\href{https://github.com/redshiftrobotics/blueshift-esc}{\faGithub \ Github}
-	\end{cvsubsection}
-	\begin{cvsubsection}{2019-2022}{Team Lead; ECE Lead}{MATE \& FRC Robotics, SAAS}
-		\textbf{Goal:} Build for and compete in national robotics competitions
-		\begin{itemize}
-			%\item FIRST FRC:  '20-'22 Team Lead,  '19 Code Lead | MATE: '20-'22 Team Lead, '18-'19 Code + Electrical Lead
-			\item Led 30+ person team in remote and in person settings with focus on culture, education and diversity
-			      %\item Cultivated diverse leaders and supportive culture, enhanced team documentation and communication strategies
-			\item Developed multi-node realtime communication system and UI, enhanced documentation and process, led team effort to build underwater robot.
-		\end{itemize}
-		\href{https://github.com/redshiftrobotics/}{\faGithub \ GitHub}
-	\end{cvsubsection}
+	% \begin{cvsubsection}{2020-2023}{Electronic Speed Control (ESC) Design}{SAAS}
+	% 	\textbf{Goal:} Design and manufacture custom brushless motor ESC. Led team (3 high school students); Taught college level electrical engineering and brushless motor control theory, schematic design, PCB design, microcontroller programming
+	% 	\\
+	% 	\href{https://github.com/redshiftrobotics/blueshift-esc}{\faGithub \ Github}
+	% \end{cvsubsection}
+	% \begin{cvsubsection}{2019-2022}{Team Lead; ECE Lead}{MATE \& FRC Robotics, SAAS}
+	% 	\textbf{Goal:} Build for and compete in national robotics competitions
+	% 	\begin{itemize}
+	% 		%\item FIRST FRC:  '20-'22 Team Lead,  '19 Code Lead | MATE: '20-'22 Team Lead, '18-'19 Code + Electrical Lead
+	% 		\item Led 30+ person team in remote and in person settings with focus on culture, education and diversity
+	% 		      %\item Cultivated diverse leaders and supportive culture, enhanced team documentation and communication strategies
+	% 		\item Developed multi-node realtime communication system and UI, enhanced documentation and process, led team effort to build underwater robot.
+	% 	\end{itemize}
+	% 	\href{https://github.com/redshiftrobotics/}{\faGithub \ GitHub}
+	% \end{cvsubsection}
 \end{cvsection}
 
-\begin{cvsection}{Languages and Technologies}
-	\begin{cvsubsection}{}{}{}
-		\begin{itemize}
-			\item \textbf{Expert:} Python, Typescript, Svelte, Pytorch, JAX,Pandas/Matplotlib
-			\item \textbf{Intermediate:} THREE.js, C++, ROS, Unix, Compiler Design, LaTeX, Verilog, MATLAB
-			\item \textbf{Engineering:} Schematic Capture, Board Layout, Altium, I2C,
-			      Trapezoidal and Field-Oriented ESC Design, \\ PIC Programming, MOSFETs, Solidworks
-			\item \textbf{Advanced studies including:} Real Analysis; Linear Algebra; Multivariable Calculus; Quantum Theory; \\ Inverse Kinematics; Optimization; Machine Learning; Quantum Mechanics; Variational Baysian Methods
-		\end{itemize}
-	\end{cvsubsection}
-\end{cvsection}
+% \begin{cvsection}{Languages and Technologies}
+% 	\begin{cvsubsection}{}{}{}
+% 		\begin{itemize}
+% 			\item \textbf{Expert:} Python, Typescript, Svelte, Pytorch, JAX,Pandas/Matplotlib
+% 			\item \textbf{Intermediate:} THREE.js, C++, ROS, Unix, Compiler Design, LaTeX, Verilog, MATLAB
+% 			\item \textbf{Engineering:} Schematic Capture, Board Layout, Altium, I2C,
+% 			      Trapezoidal and Field-Oriented ESC Design, \\ PIC Programming, MOSFETs, Solidworks
+% 			\item \textbf{Advanced studies including:} Real Analysis; Linear Algebra; Multivariable Calculus; Quantum Theory; \\ Inverse Kinematics; Optimization; Machine Learning; Quantum Mechanics; Variational Baysian Methods
+% 		\end{itemize}
+% 	\end{cvsubsection}
+% \end{cvsection}
 
 \end{document}
